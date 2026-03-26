@@ -1,0 +1,9 @@
+#root {
+    
+}
+
+.container {
+    padding: 0.5rem;
+    border-radius: 1.25rem;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.30), 0px 4px 20px rgba(0,0,0,0.3);
+}

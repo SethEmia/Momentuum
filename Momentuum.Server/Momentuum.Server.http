@@ -1,0 +1,6 @@
+@Momentuum.Server_HostAddress = http://localhost:5144
+
+GET {{Momentuum.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,93 @@
+.login-layout {
+    display: flex;
+    height: 100vh;
+    width: 100%
+}
+.left-column {
+    flex: 1;
+    background: linear-gradient( 135deg, var(--primary) 0, var(--primary-dark) );
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.left-content {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    box-sizing: border-box;
+    align-items: inherit;
+    text-align: center;
+}
+
+.left-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--bg-light);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.left-content h3 {
+    font-size: 1.2rem;
+    color: var(--bg-light);
+    margin-bottom: 0.7rem;
+    font-weight: 200;
+}
+
+
+
+.right-column {
+    flex: 1;
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.right-content {
+    display: flex;
+    -ms-flex-direction: inherit;
+    -webkit-flex-direction: inherit;
+    flex-direction: inherit;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    box-sizing: border-box;
+    align-items: inherit;
+    text-align: center;
+}
+
+.right-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+    .right-content input {
+        width: 100%;
+        min-width: 350px;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 3px solid var(--border-muted);
+        border-radius: 10px;
+        font-size: 1rem;
+        outline: none;
+        box-sizing: border-box;
+        font-family: 'Inter', system-ui, sans-serif;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.50), 0px 12px 10px rgba(0,0,0,0.3);
+    }
+
+.logo {
+    width: 10rem;
+    height: auto;
+
+}
+.logo-title {
+    margin-top: 1rem;
+    letter-spacing: 3px;
+    
+}
+

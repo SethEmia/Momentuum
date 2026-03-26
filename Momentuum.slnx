@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="momentuum.client/momentuum.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="Momentuum.Server/Momentuum.Server.csproj" />
+</Solution>
