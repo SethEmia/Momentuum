@@ -1,1 +1,16 @@
 /node_modules
+dist/
+build/
+
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+.env
+.env.local
+.env.development
+.env.production
+
+appsettings.Development.json
