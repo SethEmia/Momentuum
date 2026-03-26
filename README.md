@@ -140,7 +140,6 @@ This project focuses on:
 
 Seth Emia
 
-* GitHub: https://github.com/your-username
-* LinkedIn: (add your link)
+* GitHub: https://github.com/SethEmia
 
 ---
