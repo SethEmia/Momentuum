@@ -1,36 +1,95 @@
-.task-item{
+.task-item-row {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 1fr 100px;
+    border-bottom: 2px solid #cbd5e1;
+    /* Strong border between tasks */
+    background-color: white;
+    transition: background-color 0.2s;
+}
+
+.task-item-row:last-child {
+    border-bottom: none;
+}
+
+.task-item-row:hover {
+    background-color: #f8fafc;
+}
+
+.task-item-row .cell {
+    padding: 1.25rem;
     display: flex;
-    flex-direction: row;
-    align-items: left;
-    justify-content: left;
-    gap: 1rem;
-    padding: 0.67rem;
-    border: 2px solid var(--primary);
-    background-color: var(--bg-light);
-    border-radius: 5rem;
-    margin-bottom: 0.5rem;
+    align-items: center;
+    border-right: 2px dashed #e2e8f0;
+    /* Weaker dashed/thin border between columns */
+    color: #475569;
 }
-.task-item h3{
+
+.task-item-row .cell:last-child {
+    border-right: none;
+}
+
+.col-title h3 {
     margin: 0;
-    color: var(--text-accent);
-    flex: 3;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1e293b;
 }
-.task-item p{
-    margin: 0;
-    color: var(--text-muted);
-    flex: 1;
-}
+
 .badge {
-    padding: 0.25rem 0.5rem;
-    border-radius: 1rem;
-    color: var(--bg-light);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
+
 .badge.low {
-    background-color: hsl(73, 74%, 52%);
+    background-color: #22c55e;
 }
+
 .badge.medium {
-    background-color: hsl(48, 91%, 64%);
+    background-color: #f59e0b;
 }
+
 .badge.high {
-    background-color: hsl(10, 100%, 50%);
+    background-color: #ef4444;
+}
+
+.status-badge.pending {
+    background-color: #94a3b8;
+}
+
+.status-badge.completed {
+    background-color: #3b82f6;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: #94a3b8;
+}
+
+.action-btn.edit-btn:hover {
+    background-color: #e0f2fe;
+    color: #0ea5e9;
+}
+
+.action-btn.delete-btn:hover {
+    background-color: #fee2e2;
+    color: #ef4444;
 }

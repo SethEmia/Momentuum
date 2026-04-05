@@ -8,8 +8,16 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Momentuum.Server.Services;
 using Momentuum.Server.UserContexts;
+using DotNetEnv;
+
+
+Env.Load();
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+Console.WriteLine("JWT KEY: " + builder.Configuration["Jwt:Key"]);
 
 // Add services to the container.
 builder.Services.AddControllers(
