@@ -66,6 +66,8 @@
 }
 
 .dashboard-greeting-card {
+    position: relative;
+    overflow: hidden;
     background: linear-gradient(135deg, #38c5a3, #2ea387);
     border-radius: 20px;
     padding: 2rem;
@@ -76,7 +78,33 @@
     box-shadow: 0 8px 20px rgba(46, 163, 135, 0.2);
     border: #d8d8d8;
     border-width: 2rem;
+}
 
+.dashboard-greeting-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.2),
+        transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dashboard-greeting-card:hover::before {
+    opacity: 1;
+}
+
+.greeting-header {
+    position: relative;
+    z-index: 1;
 }
 
 .greeting-header h1 {
@@ -93,6 +121,8 @@
 }
 
 .greeting-inner-cards {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     gap: 1.5rem;

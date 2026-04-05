@@ -48,6 +48,17 @@ namespace Momentuum.Server.Controllers
             return Ok(task);
         }
 
+        [HttpPatch ("{id}/complete")]
+        public async Task<IActionResult> CompleteTask(long id)
+        {
+            var task = await _taskService.CompleteAsync(id);
+            if (task == null)
+            {
+                return NotFound();
+            }
+            return Ok(task);
+        }
+
         // PUT: api/Tasks/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

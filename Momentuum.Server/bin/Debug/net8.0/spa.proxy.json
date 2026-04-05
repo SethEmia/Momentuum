@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:59878",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Users\\Seth Nathaniel\\source\\repos\\Momentuum\\Momentuum.Server\\..\\momentuum.client",
+"WorkingDirectory": "C:\\Users\\Seth Nathaniel\\source\\repos\\Momentuum\\momentuum.server\\..\\momentuum.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

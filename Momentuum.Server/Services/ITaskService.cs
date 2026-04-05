@@ -14,6 +14,9 @@ namespace Momentuum.Server.Services
         // POST
         Task<Models.Task> CreateAsync(CreateTaskRequest request);
 
+        //PATCH
+        Task<Models.Task> CompleteAsync(long id);
+
         // PUT
         Task<Models.Task> UpdateAsync(long id, UpdateTaskRequest request);
 

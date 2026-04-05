@@ -1,12 +1,8 @@
-
-
-
-
 .parent {
     display: grid;
-    grid-template-columns: auto minmax(0,1fr);
+    grid-template-columns: auto minmax(0, 1fr);
     gap: 1rem;
-    height: 100%;
+    min-height: 100vh;
 }
 
 
@@ -23,11 +19,10 @@
     width: 50px;
 }
 
-.mainContent{
+.mainContent {
     margin: 1rem;
     grid-column: 2;
     grid-row: 1/-1;
     grid-column-start: 2;
     grid-row-start: 1;
 }
-        

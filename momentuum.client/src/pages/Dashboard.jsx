@@ -3,6 +3,14 @@ import './Dashboard.css';
 import CalendarWidget from '../components/CalendarWidget';
 
 export default function Dashboard() {
+    const handleMouseMove = (e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+        e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+    };
+
     return (
         <div className="dashboard-container">
             <header className="dashboard-top-bar">
@@ -12,7 +20,7 @@ export default function Dashboard() {
                 <div className="profile-placeholder"></div>
             </header>
 
-            <section className="dashboard-greeting-card">
+            <section className="dashboard-greeting-card" onMouseMove={handleMouseMove}>
                 <div className="greeting-header">
                     <h1>Good Morning, John Doe</h1>
                     <p>You have <strong>2</strong> Upcoming Project Deadlines</p>

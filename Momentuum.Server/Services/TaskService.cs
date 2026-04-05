@@ -51,6 +51,21 @@ namespace Momentuum.Server.Services
             return task;
         }
 
+        public async Task<Models.Task> CompleteAsync(long id){
+            var userId = _userContext.UserId;
+            var task = await _context.Tasks.FirstOrDefaultAsync(t => t.TaskId == id && t.UserId == userId);
+            if(task == null)
+            {
+                return null;
+            }
+
+            task.IsCompleted = true;
+            task.CompletedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return task;
+        }
+
         public async Task<Models.Task> UpdateAsync(long id, UpdateTaskRequest request)
         {
             var userId = _userContext.UserId;

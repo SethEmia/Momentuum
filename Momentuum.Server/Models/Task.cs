@@ -29,7 +29,6 @@ namespace Momentuum.Server.Models
     {
         Low,
         Medium,
-        High,
-        Urgent
+        High
     }
 }

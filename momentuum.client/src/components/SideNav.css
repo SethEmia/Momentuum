@@ -1,9 +1,13 @@
 .navBar {
-    grid-row: 1/-1;
-    grid-row-start: 2;
+    grid-row: 1 / -1;
     background-color: var(--bg);
     justify-content: center;
     text-align: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    align-self: start;
 }
 .navBar div {
     padding: 1rem;
@@ -12,10 +16,25 @@
     display: flex;
     flex-direction:column;
 }
-.nav-link{
-    padding: 1rem;
+.nav-link {
+    padding: 1rem 1.5rem;
     display: block;
     text-decoration: none;
-    color: var(--text);
+    color: var(--text-muted, #777);
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    border-radius: 12px;
+    margin: 0.25rem 1rem;
+}
 
+.nav-link:hover {
+    background-color: var(--bg-dark, #e2e8f0);
+    color: var(--primary-dark, #0f172a);
+    transform: translateX(4px);
+}
+
+.nav-link.active {
+    background: var(--primary-gradient, linear-gradient(135deg, #4ad8b4, #2ebda3));
+    color: white;
+    box-shadow: 0 4px 10px rgba(46, 189, 163, 0.3);
 }

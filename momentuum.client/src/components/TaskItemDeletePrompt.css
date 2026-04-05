@@ -1,0 +1,58 @@
+.delete-prompt-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    z-index: 10;
+    animation: fadeSlideIn 0.2s ease-out;
+}
+
+@keyframes fadeSlideIn {
+    0% { opacity: 0; transform: translateY(-5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.delete-prompt-overlay p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #1e293b;
+}
+
+.delete-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.prompt-btn {
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.prompt-btn.cancel-btn {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.prompt-btn.cancel-btn:hover {
+    background-color: #cbd5e1;
+}
+
+.prompt-btn.confirm-btn {
+    background-color: #ef4444;
+    color: white;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+}
+
+.prompt-btn.confirm-btn:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(239, 68, 68, 0.4);
+}
