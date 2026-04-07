@@ -90,6 +90,8 @@ builder.Services.AddScoped<IUserContext, UserContext>();
 
 builder.Services.AddScoped<ITaskService, TaskService>();
 
+builder.Services.AddScoped<IHabitService, HabitService>();
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequireDigit = false;

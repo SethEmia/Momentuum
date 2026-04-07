@@ -1,0 +1,206 @@
+.habits-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.habits-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.habits-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.habits-header-left h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.habit-filters {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-chip {
+    background: var(--surface-light);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+    background: var(--surface-hover);
+    color: var(--text-primary);
+}
+
+.filter-chip.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.habits-header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-input-habits {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--surface-medium);
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.2s ease;
+    width: 250px;
+}
+
+.search-input-habits:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+}
+
+.new-habit-form-container {
+    padding: 1.5rem;
+}
+
+.form-placeholder {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.input-field {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--surface-medium);
+    color: var(--text-primary);
+    outline: none;
+    flex: 1;
+}
+
+.habits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.habit-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.habit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.habit-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.habit-card-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.habit-frequency {
+    font-size: 0.8rem;
+    background: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+}
+
+.habit-stats {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.habit-actions {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.action-button {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    background: var(--surface-light);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.action-button:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.empty-habits-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    background: var(--surface-medium);
+    border-radius: 12px;
+    color: var(--text-secondary);
+    border: 1px dashed var(--border-color);
+}
+
+/* Glass panel utility (assuming it might be needed if not fully defined in Dashboard.css) */
+.glass-panel {
+    background: var(--surface-medium);
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+}

@@ -56,7 +56,7 @@ export default function CalendarWidget() {
     const dayNames = ["Sun", "Mon", "Tue", "Wed", "Th", "Fri", "Sat"];
 
     return (
-        <div className="calendar-widget glassmorphism">
+        <div className="calendar-widget">
             <div className="calendar-header">
                 <button onClick={handlePrevMonth} className="nav-button">&#10094;</button>
                 <h3>{monthNames[month]} {year}</h3>

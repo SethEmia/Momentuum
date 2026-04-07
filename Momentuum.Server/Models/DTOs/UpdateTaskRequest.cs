@@ -10,7 +10,5 @@
         public bool IsArchived { get; set; } = false;
         public TaskPriority Priority { get; set; } = TaskPriority.Medium;
         public TaskStatus Status { get; set; } = TaskStatus.Pending;
-        
-
     }
 }

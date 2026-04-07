@@ -15,6 +15,7 @@ export default function SideNav() {
             <nav>
                 <NavLink className="nav-link" to="/">Dashboard</NavLink>
                 <NavLink className="nav-link" to="/tasks">Tasks</NavLink>
+                <NavLink className="nav-link" to="/habits">Habits</NavLink>
                 <NavLink className="nav-link" to="/projects">Projects</NavLink>
                 <NavLink className="nav-link" to="/calendar">Calendar</NavLink>
             </nav>
