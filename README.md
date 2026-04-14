@@ -70,43 +70,6 @@ momentuum/
 ├── momentuum.client/   # React frontend
 ├── Momentuum.Server/   # .NET Web API backend
 ```
-
----
-## Configuration
-
-This project uses environment-based configuration to securely manage sensitive data.
-
-### appsettings.json (committed)
-
-Contains non-sensitive configuration such as:
-
-* Logging settings
-* Allowed hosts
-* JWT Issuer and Audience
-
-### Sensitive Configuration (NOT committed)
-
-The following values must be configured locally using **.NET User Secrets**:
-
-* ConnectionStrings:DefaultConnection
-* Jwt:Key
-
----
-
-### Setting up User Secrets
-
-Inside the backend project directory:
-
-```bash id="u8q2aa"
-dotnet user-secrets init
-
-dotnet user-secrets set "ConnectionStrings:DefaultConnection" "your-postgres-connection-string"
-
-dotnet user-secrets set "Jwt:Key" "your-secret-key"
-```
-
----
-
 ---
 ## Getting Started
 
