@@ -114,7 +114,9 @@ https://localhost:xxxx (port will be shown in terminal)
 * [x] Task listing
 * [ ] Task editing
 * [ ] Task deletion
-* [ ] Authentication (JWT)
+* [x] Authentication (JWT)
+* [ ] Habit CRUD
+* [ ] Project CRUD
 * [ ] Deployment
 
 ---
